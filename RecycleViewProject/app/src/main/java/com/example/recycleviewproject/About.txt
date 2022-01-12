@@ -1,0 +1,48 @@
+To Create Recycle View We have to foolow the below Steps:
+
+1- We have to create a Model Class where we define the fields which 'll use in recycle view. In
+our project it is RecipeModel.java
+
+2- in activity_main.xml we define the recycle view layout
+3- Now we create another sample layout in which we define the layout that we want inside our
+recycleview layout
+
+NOTE: How To Create another Layout
+=====
+1- Right Click on layout folder inside res
+2- Click on New, than Click on Layout Resource File
+
+
+4- Now create an Adapter Class. This class is used to inflate the sample_recycleview layout
+and all findViewById of this sample layout is done here
+In our example it is RecipeAdapter.java
+
+5- This findByID task we do inside another class that 'll be the sublcass of RecipeAdapter.java
+
+ public class ViewHolder extends RecyclerView.ViewHolder {
+        ImageView imageView;
+        TextView textView;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            imageView = itemView.findViewById(R.id.imageView);
+            textView = itemView.findViewById(R.id.textView);
+        }
+    }
+
+6- Our Main RecipeAdapter.java extends RecyclerView.Adapter<RecipeAdapters.ViewHolder>
+Here inside the <Our Main Class i.e RecipeAdapter. Our Subclass i.e ViewHolder>
+
+after extending this we have to implement 3 method
+   onCreateViewHolder => It is used to inflate our sampler layout
+   onBindViewHolder => Used to bind the data to this sampler layout
+   getItemCount => Used to return size of List of Model Class
+
+7- Now go to MainActivity.java and create the List of the Model Class
+      recyclerView = findViewById(R.id.recycleView)
+      RecipeAdapters adapters = new RecipeAdapters(list, this);   // We created this class
+      recyclerView.setAdapter(adapters);
+
+     Now we have to decide the Layout for this So For Linear Layout add below code in MainActivity
+         LinearLayoutManager linearLayout = new LinearLayoutManager(this);
+         recyclerView.setLayoutManager(linearLayout);
