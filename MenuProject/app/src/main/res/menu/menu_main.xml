@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/refreshId"
+        android:icon="@drawable/ic_refresh"
+        android:title="refresh"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/refrenceCode"
+        android:title="Reference Code"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/exitApp"
+        android:title="New Offers"
+        app:showAsAction="never">
+
+        <menu>
+            <item
+                android:id="@+id/pack_299"
+                android:title="299 Rs Pack" />
+            <item
+                android:id="@+id/pack_499"
+                android:title="499 Rs Pack" />
+            <item
+                android:id="@+id/pack_699"
+                android:title="699 Rs Pack" />
+            <item
+                android:id="@+id/pack_899"
+                android:title="899 Rs Pack" />
+            <item
+                android:id="@+id/pack_1000"
+                android:title="1000 Rs Pack" />
+        </menu>
+    </item>
+</menu>

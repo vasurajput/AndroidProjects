@@ -1,0 +1,37 @@
+To create a Menu We have to follow the below steps:
+
+1- Click on res folder -> new -> Android Resource Directory
+2- Now right click on this directory and create a xml file with any name pit the code in that in our case
+it is menu_main.xml
+
+3- Now We have inject this menu so go to your MainActivity.java class
+   press ctrl o and override onCreateOptionsMenu method
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+4- Now Run your application till this point your menu has been created
+5- Now we want to perform some task when our menu option will selected So for this
+   Go to MainActivity.class and press ctrl o
+   And override onOptionsItemSelected and use the switch statement there
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.refrenceCode:
+                Toast.makeText(this, "Your refrence code is vasu_01", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.refreshId:
+                Toast.makeText(this, "Wait App is refreshing", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.pack_299:
+                Toast.makeText(this, "To activate 299 pack", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return super.onOptionsItemSelected(item);
+    } 
