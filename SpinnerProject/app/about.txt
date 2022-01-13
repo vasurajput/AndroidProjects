@@ -1,0 +1,44 @@
+1- To create Spinner we have to add the spinner in our layout
+
+2- Now Go to your Res folder , open values folder, now open string.xml file and add the below code there inside resource tag
+
+     <string-array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+3- Now GO to your MainActivity.java class file and write the following code inside your onCreate method
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Spinner spinner = findViewById(R.id.spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.genders, R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+    }
+
+4- If we want to perform any task while selectinig any field from spinner
+    than we have to implements AdapterView.OnItemSelectedListener  to our main class
+
+After implementing AdapterView.OnItemSelectedListener We 'll get two unimplemented method 
+
+    -> onItemSelected
+    -> onNothingSelected
+
+5- Now If we select anything from spinner we 'll show a toast with the value so write below code inside onItemSelected method
+
+       @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+        String text = adapterView.getItemAtPosition(position).toString();
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+        System.out.print(text);
+    }
+
+6- Now Run your Project and Test
+
+    
