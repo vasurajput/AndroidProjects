@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <Button
+        android:id="@+id/getRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="64dp" />
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="326dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Write Here for Request"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="383dp" />
+
+    <Button
+        android:id="@+id/getPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Path Variable"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <Button
+        android:id="@+id/getQuery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Query Param"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <Button
+        android:id="@+id/getPathAndQuery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get With Path and Query"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="274dp" />
+
+    <Button
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="445dp" />
+
+
+</LinearLayout>
